@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import Btn from './btn.jsx'
 
 function Add({work,setwork}){
@@ -8,7 +8,7 @@ function Add({work,setwork}){
     const add=()=>{
         const input = inref.current.value;
         if(input !== null && input.trim() !==""){
-            setwork([...work,input]);
+            setwork([...work,{text:input,done:false}]);
         }
        inref.current.value ="";
 
